@@ -1,0 +1,122 @@
+body {
+    text-rendering: optimizeLegibility;
+}
+
+.div {
+    display: block;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+
+.container {
+    display: flex;
+    .sidebar {
+        width: 320px;
+        .sidebar__item {
+            position: sticky;
+            margin-bottom: 0;
+            top: 10px;
+            z-index: 1;
+            ol {
+                list-style: none;
+                border-color: black;
+            }
+        }
+    }
+    .news-archive-content {
+        padding-right: 2rem;
+        position: relative;
+
+        .news-card-wrapper {
+            outline: inset;
+
+
+            .news-card {
+                margin-left: 5%;
+                margin-top: 1rem;
+                position: relative;
+                outline: none;
+                a {
+                    display: flex;
+
+                    align-items: center;
+
+                    user-select: none;
+                    text-decoration: none;
+
+                    background-color: transparent;
+                    color: inherit;
+
+                    .image-wrapper {
+                        flex-shrink: 0;
+                        margin: 0;
+
+                        width: 60%;
+                        height: auto;
+                        position: relative;
+
+                        &:before{
+                            content: "";
+                            display: block;
+                            padding-top: 56.25%;
+                        }
+                        .background-image {
+                            height: 100%;
+                            width: 100%;
+
+                            position: absolute;
+                            display: block;
+                            top: 0;
+                            background-size: cover;
+                            background-position-x: center;
+                        }
+                    }
+                    .news-info {
+                        position: relative;
+
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 4rem;
+                        align-self: stretch;
+                        padding-bottom: 0;
+
+                        margin: 0;
+                        .published {
+                            display: block;
+                            color: #383e3a;
+
+                            width: 100%;
+                            flex-shrink: 0;
+                            margin-bottom: 1.5rem;
+
+                            margin-top: 0;
+                        }
+                        .news-title {
+                            display: block;
+
+                            width: auto;
+                            padding-right: 1rem;
+                            margin: 0;
+
+                            color: #383e3a;
+                        }
+                        .description {
+                            display: block;
+
+                            margin: 1.25rem, 1.7rem;
+                            color: #768079;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .twitter-timeline {
+        position: sticky;
+        margin-bottom: 0;
+        top: 10px;
+        z-index: 1;
+    }
+}

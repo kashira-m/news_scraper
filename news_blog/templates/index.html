@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/style.css"/>
+    <script type="text/javascript" src="/news_blog/static/js/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar__item">
+                <li>NEWS</li>
+                <a class="twitter-timeline" data-width="250" data-height="600" data-theme="light" href="https://twitter.com/PlayVALORANT?ref_src=twsrc%5Etfw">Tweets by PlayVALORANT</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+        <div class="news-archive-content">
+            {% for n in range(num) %}
+            <div class="news-card-wrapper">
+                <div class="news-card">
+                    <a href="{{ newses[n].article_link }}" target="_blank">
+                        <div class="image-wrapper">
+                            <span class="background-image" style="background-image: url({{newses[n].image_link}})"></span>
+                        </div>
+                        <div class="news-info">
+                            <p class="published">{{ newses[n].date }}</p>
+                            <h5 class="news-title">{{ newses[n].title }}</h5>
+                            <p class="description">{{ newses[n].descr }}</p></br>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</body>
+</html>
